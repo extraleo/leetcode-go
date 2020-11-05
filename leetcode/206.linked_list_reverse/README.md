@@ -18,13 +18,13 @@ func reverseList(head *ListNode) *ListNode {
 25 是把 K 个节点一次的翻转, 想想 206 把所有节点翻转, 是不是可以想成给定 头和尾节点, 翻转这节节点链, 翻转所有节点就是 head =  head; end = nil, 即
 ```golang
 func reverseList(first, last *ListNode) *ListNode {
-  prev := last.Next
+  prev := last.Next // prev = nil
   end := last.Next // end = nil
-  for head != end{ // 当head移动到最后就完成了 1. 确认循环退出条件
-    next := head.Next // 2.记录下 下一个 节点 
+  for first != end { // 当head移动到最后就完成了 1. 确认循环退出条件
+    next := first.Next // 2.记录下 下一个 节点 
     head.Next = prev // 4. 开始交换节点
-    prev = head
-    head = next // 3. 开始下次循环
+    prev = first
+    first = next // 3. 开始下次循环
   }
   return prev
 }

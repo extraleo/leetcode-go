@@ -1,8 +1,7 @@
 package structures
 
 type TreeNode struct {
-	Val int
-	Name string 
-	Left *TreeNode 
-	Right *TreeNode 
+    Val int
+    Left *TreeNode
+    Right *TreeNode
 }
