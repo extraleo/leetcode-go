@@ -29,16 +29,16 @@ func reverseListHeadAndEnd(head *ListNode) *ListNode{
 }
 
 
-func reverse(first, last *ListNode) *ListNode{
-	var prev *ListNode
-	curr := first
-	for prev != last{
-		next := curr.Next
-		curr.Next = prev
-		prev = curr
-		curr = next
-	}
-	return prev
+func reverse(head, last *ListNode) *ListNode{
+	prev := last.Next
+	end := last.Next 
+  for head != end{ 
+    next := head.Next  
+    head.Next = prev 
+    prev = head
+    head = next 
+  }
+  return prev
 }
 
 // Recursion
