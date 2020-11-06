@@ -39,4 +39,20 @@ func hasCycleMap(head *ListNode) bool{
   return false
 }
 
+// seems map also resovle the cycle ii but:
+// 16/16 cases passed (8 ms)
+// Your runtime beats 36.67 % of golang submissions
+// Your memory usage beats 7.34 % of golang submissions (5.2 MB)
+func hasCycleMapII(head *ListNode) *ListNode {
+		nodeMap := make(map[*ListNode]bool)
+	for head != nil{
+		if nodeMap[head] {
+			return head
+		}
+		nodeMap[head]=true
+		head=head.Next
+	} 
+  return nil
+}
+
 // @lc code=end

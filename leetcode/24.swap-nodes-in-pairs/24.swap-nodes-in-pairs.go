@@ -18,7 +18,6 @@ func swapPairs(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil{
         return head
     }
-
     newHead:=swapPairs(head.Next.Next)
     second:=head.Next
     second.Next =head
