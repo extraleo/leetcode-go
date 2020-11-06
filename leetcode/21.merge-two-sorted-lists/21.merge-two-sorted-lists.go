@@ -1,7 +1,3 @@
-package leetcode
-
-import "github.com/extraleo/alg/structures"
-
 /*
  * @lc app=leetcode id=21 lang=golang
  *
@@ -9,6 +5,10 @@ import "github.com/extraleo/alg/structures"
  */
 
 // @lc code=start
+
+package leetcode
+
+import "github.com/extraleo/alg/structures"
 
 type ListNode = structures.ListNode
 
