@@ -14,7 +14,12 @@ type ListNode = structures.ListNode
 
 // using dummy node to create list
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-    return nil
-}
-// @lc code=end
+	dummy := &ListNode{0, &ListNode{}}
+	for l1.Next != nil && l2.Next != nil {
+		
+	}
 
+	return dummy.Next
+}
+
+// @lc code=end
