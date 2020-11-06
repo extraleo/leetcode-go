@@ -5,6 +5,13 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type LRUNode struct{
+	Key int
+	Val int
+	Prev *LRUNode
+	Next *LRUNode
+}
+
 func Ints2List(val []int) *ListNode{
 	if len(val) == 0 {
 		return nil
