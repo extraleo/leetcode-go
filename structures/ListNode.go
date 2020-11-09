@@ -5,11 +5,11 @@ type ListNode struct {
 	Next *ListNode
 }
 
-type LRUNode struct{
+type LinkedListNode struct{
 	Key int
 	Val int
-	Prev *LRUNode
-	Next *LRUNode
+	Prev *LinkedListNode
+	Next *LinkedListNode
 }
 
 func Ints2List(val []int) *ListNode{

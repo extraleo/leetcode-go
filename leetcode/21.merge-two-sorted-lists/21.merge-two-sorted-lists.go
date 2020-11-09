@@ -25,7 +25,6 @@ func mergeTwoListsRecursion(l1,l2 *ListNode) *ListNode{
 	if l2 == nil{
 		return l1
 	}
-
 	if l1.Val < l2.Val{
 		l1.Next = mergeTwoListsRecursion(l1.Next, l2)
 		return l1
