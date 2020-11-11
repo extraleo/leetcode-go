@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=23 lang=golang
+ * @lc app=leetcode id=82 lang=golang
  *
- * [23] Merge k Sorted Lists
+ * [82] Remove Duplicates from Sorted List II
  */
 
 // @lc code=start
@@ -22,8 +22,8 @@ import "github.com/extraleo/alg/structures"
 type ListNode = structures.ListNode
 
 // TODO
-func mergeKLists(lists []*ListNode) *ListNode {
-  return nil   
+func deleteDuplicates(head *ListNode) *ListNode {
+    return nil
 }
 // @lc code=end
 
