@@ -18,12 +18,27 @@ package leetcode
 
 import "github.com/extraleo/alg/structures"
 
-
 type ListNode = structures.ListNode
 
-// TODO
+// sorted list, need a dummy node
 func deleteDuplicates(head *ListNode) *ListNode {
-    return nil
+	if head == nil {
+		return head
+	}
+	dummy := &ListNode{0, head}
+	curr := dummy
+	for curr.Next != nil && curr.Next.Next != nil {
+		if curr.Next.Val == curr.Next.Next.Val {
+			tmp := curr.Next
+			for tmp != nil && tmp.Val == curr.Next.Val {
+				tmp = tmp.Next
+			}
+			curr.Next = tmp
+			continue
+		}
+		curr = curr.Next
+	}
+	return dummy.Next
 }
-// @lc code=end
 
+// @lc code=end
