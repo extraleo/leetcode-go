@@ -18,12 +18,38 @@ package leetcode
 
 import "github.com/extraleo/alg/structures"
 
-
 type ListNode = structures.ListNode
 
-// TODO
+// find head and end, and reverse it
 func reverseBetween(head *ListNode, m int, n int) *ListNode {
-    return nil
-}
-// @lc code=end
+	if head == nil || head.Next == nil || m == n {
+		return head
+	}
 
+	fast, slow := head, head
+	dummy := &ListNode{0, head}
+	revereHead := dummy
+	for i := 0; i < m-1; i++ {
+		revereHead = fast
+		fast = fast.Next
+	}
+	for i := 0; i < n; i++ {
+		slow = slow.Next
+	}
+
+	revereHead.Next = reverse(fast, slow)
+	return dummy.Next
+}
+
+func reverse(first, last *ListNode) *ListNode {
+	prev := last
+	for first != last {
+		next := first.Next
+		first.Next = prev
+		prev = first
+		first = next
+	}
+	return prev
+}
+
+// @lc code=end

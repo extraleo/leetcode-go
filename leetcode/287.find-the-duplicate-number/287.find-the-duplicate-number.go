@@ -8,7 +8,7 @@
 
 package leetcode
 
-//TODO
+// TODO: don't understand how to build a linked list
 // 1. using map to find the duplicate one
 // 2. using fast slow point find if has cycle, but I don't understand how to build a linked list
 func findDuplicate(nums []int) int {

@@ -28,7 +28,7 @@ func Ints2List(val []int) *ListNode{
 
 func List2Ints(val *ListNode) []int{
 	result := make([]int,0)
-	for val.Next != nil{
+	for val != nil{
 		result = append(result, val.Val)
 		val=val.Next
 	}

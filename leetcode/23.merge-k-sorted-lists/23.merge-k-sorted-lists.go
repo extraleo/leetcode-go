@@ -21,7 +21,7 @@ import "github.com/extraleo/alg/structures"
 
 type ListNode = structures.ListNode
 
-// TODO
+// TODO merge sort
 func mergeKLists(lists []*ListNode) *ListNode {
   return nil   
 }
