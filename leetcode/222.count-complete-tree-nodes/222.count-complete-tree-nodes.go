@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {
@@ -13,8 +14,16 @@
  *     Right *TreeNode
  * }
  */
-func countNodes(root *TreeNode) int {
-    
-}
-// @lc code=end
 
+package leetcode
+
+import "github.com/extraleo/alg/structures"
+
+type TreeNode = structures.TreeNode
+
+func countNodes(root *TreeNode) int {
+//TODO
+return -1
+}
+
+// @lc code=end
