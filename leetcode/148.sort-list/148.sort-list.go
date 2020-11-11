@@ -21,7 +21,7 @@ import "github.com/extraleo/alg/structures"
 type ListNode = structures.ListNode
 
 // time: O(nlogn) time and O(1) memory
-// merge sort
+// @sort merge sort
 func sortList(head *ListNode) *ListNode {
 	// TODO
 	return nil
