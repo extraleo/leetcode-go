@@ -12,7 +12,7 @@ import "github.com/extraleo/alg/structures"
 
 type ListNode = structures.ListNode
 
-
+// @sort 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	return mergeTwoListsRecursion(l1,l2)
 }
