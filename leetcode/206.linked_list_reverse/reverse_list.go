@@ -1,9 +1,3 @@
-package leetcode
-
-import (
-	"github.com/extraleo/alg/structures"
-)
-
 /*
  * @lc app=leetcode.cn id=206 lang=golang
  *
@@ -12,6 +6,11 @@ import (
 
 // @lc code=start
 
+package leetcode
+
+import (
+	"github.com/extraleo/alg/structures"
+)
 
 type ListNode = structures.ListNode
 
@@ -19,34 +18,36 @@ func reverseList(head *ListNode) *ListNode {
 	return reverseListHeadAndEnd(head)
 }
 
-func reverseListHeadAndEnd(head *ListNode) *ListNode{
-	last :=  head
-	for last.Next != nil{
-		last= last.Next
+func reverseListHeadAndEnd(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	last := head
+	for last.Next != nil {
+		last = last.Next
 	}
 
-  return reverse(head,last)
+	return reverse(head, last)
 }
 
-
-func reverse(head, last *ListNode) *ListNode{
+func reverse(head, last *ListNode) *ListNode {
 	prev := last.Next
-	end := last.Next 
-  for head != end{ 
-    next := head.Next  
-    head.Next = prev 
-    prev = head
-    head = next 
-  }
-  return prev
+	end := last.Next
+	for head != end {
+		next := head.Next
+		head.Next = prev
+		prev = head
+		head = next
+	}
+	return prev
 }
 
 // Recursion
-func reverseListR(head *ListNode) *ListNode{
-	if head == nil || head.Next == nil{
+func reverseListR(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
 		return head
 	}
-	newHead:=reverseListR(head)
+	newHead := reverseListR(head.Next)
 	head.Next.Next = head
 	head.Next = nil
 	return newHead
@@ -54,19 +55,19 @@ func reverseListR(head *ListNode) *ListNode{
 
 func reverseListA1(head *ListNode) *ListNode {
 	var pre *ListNode
-	for head != nil{
+	for head != nil {
 		head.Next, pre, head = pre, head, head.Next
 	}
 	return pre
 }
 
-func reverseListA0(head *ListNode) *ListNode{
+func reverseListA0(head *ListNode) *ListNode {
 	var pre *ListNode
- 	curr:=head
-	
-	for curr != nil{
+	curr := head
+
+	for curr != nil {
 		next := curr.Next
-		curr.Next =pre
+		curr.Next = pre
 		pre = curr
 		curr = next
 	}
@@ -74,4 +75,3 @@ func reverseListA0(head *ListNode) *ListNode{
 }
 
 // @lc code=end
-
