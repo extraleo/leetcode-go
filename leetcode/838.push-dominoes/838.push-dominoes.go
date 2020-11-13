@@ -11,9 +11,14 @@
 
 package leetcode
 
-// todo
+import "strings"
+
+// @order low
 func pushDominoes(dominoes string) string {
-  
+	result := make([]string, len(dominoes))
+	
+	return strings.Join(result,"")
 }
+
 // @lc code=end
 

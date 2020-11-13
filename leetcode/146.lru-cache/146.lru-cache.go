@@ -8,8 +8,10 @@
 
 package leetcode
 
-// @note
+// @again
 // FIXME seems NPE
+
+
 type ListNode struct{
 	Key int
 	Val int

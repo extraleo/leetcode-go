@@ -14,11 +14,6 @@
  * }
  */
 
-// todo
-// Input: head =0->1->4->3->2->5->2, x = 3
-// Output: 0->1->2->2->4->3->5
-// 头插法
-
 package leetcode
 
 import (
