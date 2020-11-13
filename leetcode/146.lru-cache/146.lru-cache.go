@@ -8,7 +8,7 @@
 
 package leetcode
 
-// TODO seems NPE
+// @note
 // FIXME seems NPE
 type ListNode struct{
 	Key int

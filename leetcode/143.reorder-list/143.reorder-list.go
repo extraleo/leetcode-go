@@ -23,7 +23,8 @@ import (
 type ListNode = structures.ListNode
 
 
- // 123654 => 162534
+// @note
+// 123654 => 162534
 func reorderList(head *ListNode) *ListNode {
   if head == nil|| head.Next == nil{
     return head
