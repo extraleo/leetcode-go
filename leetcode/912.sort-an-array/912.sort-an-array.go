@@ -8,13 +8,60 @@
 
 package leetcode
 
-import "math/rand"
+import (
+	"math/rand"
+)
 
 func sortArray(nums []int) []int {
-	return quick(nums)
+	return insertSort(nums)
 }
 
-func quick(nums []int) []int {
+func mergeSort(nums []int) []int{
+	if len(nums) < 2{
+		return nums
+	}
+	return merge(mergeSort(nums[:1]), mergeSort(nums[1:]))
+}
+
+func merge(left, right []int) []int{
+	if left == nil || len(left) == 0{
+		return right
+	}
+	if right == nil || len(right) == 0{
+		return left
+	}
+	return nil
+}
+
+func insertSort(nums []int) []int {
+	for i := 1; i < len(nums); i++ {
+		keyItem := nums[i]
+		k := i - 1
+		for k >= 0 && nums[k] > keyItem {
+			nums[k+1] = nums[k]
+			k--
+		}
+		nums[k+1] = keyItem
+	}
+	return nums
+}
+
+func selectSort(nums []int) []int {
+	for index := range nums {
+		min := nums[index]
+		minIndex := index
+		for k := index + 1; k < len(nums); k++ {
+			if nums[k] < min {
+				minIndex = k
+				min = nums[k]
+			}
+		}
+		nums[index], nums[minIndex] = nums[minIndex], nums[index]
+	}
+	return nums
+}
+
+func quickSort(nums []int) []int {
 	if len(nums) < 2 {
 		return nums
 	}
@@ -32,7 +79,7 @@ func quick(nums []int) []int {
 		}
 	}
 
-	return append(append(quick(low), same...), quick(high)...)
+	return append(append(quickSort(low), same...), quickSort(high)...)
 }
 
 // @lc code=end
