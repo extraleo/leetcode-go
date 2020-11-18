@@ -24,13 +24,13 @@ type ListNode = structures.ListNode
 
 /**
 *  空间复杂度是 n, 但是我感觉应该是有可能空间复杂是 1 的
-*/
+ */
 func partition(head *ListNode, x int) *ListNode {
 	return partitionBuildNewOne(head, x)
 }
 
 func partitionBuildNewOne(head *ListNode, x int) *ListNode {
-	mHead, lHead := &ListNode{0, nil}, &ListNode{0, nil}
+	mHead, lHead := &ListNode{Val: 0, Next: nil}, &ListNode{Val: 0, Next: nil}
 	m, l := mHead, lHead
 	for head != nil {
 		if head.Val < x {
