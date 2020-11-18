@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=222 lang=golang
+ * @lc app=leetcode id=145 lang=golang
  *
- * [222] Count Complete Tree Nodes
+ * [145] Binary Tree Postorder Traversal
  */
 
 // @lc code=start
@@ -13,7 +13,9 @@
  *     Right *TreeNode
  * }
  */
-func countNodes(root *TreeNode) int {
+// todo
+// @order 2
+func postorderTraversal(root *TreeNode) []int {
     
 }
 // @lc code=end
