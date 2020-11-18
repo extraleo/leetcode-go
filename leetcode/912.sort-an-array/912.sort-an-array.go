@@ -13,14 +13,15 @@ import (
 )
 
 func sortArray(nums []int) []int {
-	return insertSort(nums)
+	return mergeSort(nums)
 }
 
 func mergeSort(nums []int) []int{
 	if len(nums) < 2{
 		return nums
 	}
-	return merge(mergeSort(nums[:1]), mergeSort(nums[1:]))
+	mid := len(nums)/2 -1
+	return merge(mergeSort(nums[:mid]), mergeSort(nums[mid:]))
 }
 
 func merge(left, right []int) []int{
@@ -30,6 +31,9 @@ func merge(left, right []int) []int{
 	if right == nil || len(right) == 0{
 		return left
 	}
+	// todo
+	// all := make([]int,0)
+
 	return nil
 }
 

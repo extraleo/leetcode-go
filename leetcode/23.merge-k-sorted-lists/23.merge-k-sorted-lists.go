@@ -16,15 +16,34 @@
 
 package leetcode
 
-import "github.com/extraleo/alg/structures"
+import (
+	"github.com/extraleo/alg/structures"
+)
 
 
 type ListNode = structures.ListNode
 
 // @sort
-// TODO merge sort
 func mergeKLists(lists []*ListNode) *ListNode {
-  return nil   
+  // for inde
 }
+
+func mergeTwoLists(left, right *ListNode) *ListNode{
+  if left == nil{
+    return right
+  }
+  if right == nil{
+    return left
+  }
+
+  if left.Val < right.Val{
+    left.Next = mergeTwoLists(left.Next, right)
+    return left
+  }
+  right.Next= mergeTwoLists(right.Next, left)
+  return right
+}
+
+
 // @lc code=end
 

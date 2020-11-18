@@ -13,6 +13,8 @@ import "github.com/extraleo/alg/structures"
 type ListNode = structures.ListNode
 
 // @sort 
+// Your runtime beats 100 % of golang submissions
+// Your memory usage beats 9.07 % of golang submissions (2.6 MB)
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	return mergeTwoListsRecursion(l1,l2)
 }
@@ -45,7 +47,7 @@ func mergeTwoListIteration(l1,l2 *ListNode) *ListNode{
 	if l2 == nil{
 		return l1
 	}
-	dummy := &ListNode{0, &ListNode{}}
+	dummy := &ListNode{Val: 0}
 	head := dummy
 	for l1 != nil && l2 != nil {
 		if l1.Val < l2.Val {
