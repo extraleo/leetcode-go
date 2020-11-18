@@ -16,6 +16,11 @@ func sortArray(nums []int) []int {
 	return mergeSort(nums)
 }
 
+// todo
+func hellSort(nums []int) []int{
+	return nums
+}
+
 func mergeSort(nums []int) []int{
 	if len(nums) < 2{
 		return nums
