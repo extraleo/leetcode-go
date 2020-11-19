@@ -17,16 +17,23 @@
 
 package leetcode
 
-import "github.com/extraleo/alg/structures"
+import (
+	"container/list"
+
+	"github.com/extraleo/alg/structures"
+)
 
 type TreeNode = structures.TreeNode
 
 func preorderTraversal(root *TreeNode) []int {
-	return preorderTraversalInteration(root)
+	return preorderTraversalRecursion1(root)
 }
 
 func preorderTraversalInteration(root *TreeNode) []int {
-	return nil
+	var output []int
+	var stack *list.List
+
+	return output
 }
 
 // 递归

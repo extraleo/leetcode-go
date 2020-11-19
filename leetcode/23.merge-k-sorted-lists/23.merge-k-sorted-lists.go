@@ -23,9 +23,10 @@ import (
 
 type ListNode = structures.ListNode
 
-// @sort
+// @sort 
+// todo 看起来只需要不断的merge, 但是, 我想是否两个两个排序的时候可以使用快排?
 func mergeKLists(lists []*ListNode) *ListNode {
-  // for inde
+return nil
 }
 
 func mergeTwoLists(left, right *ListNode) *ListNode{
