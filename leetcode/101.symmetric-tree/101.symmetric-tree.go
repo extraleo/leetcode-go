@@ -24,7 +24,7 @@ type TreeNode = structures.TreeNode
 
 //@order 2
 func isSymmetric(root *TreeNode) bool {
-
+	return false
 }
 
 // @lc code=end
